@@ -1,0 +1,41 @@
+@import 'font.css';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #070B0D;
+}
+.info_us{
+    text-align: center;
+    margin: 20px 0;
+}
+.info_us h2{
+    margin: 0 0 20px 0;
+    font-family: 'SairaStencilOne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 16px;
+    color: white;
+}
+.info_card{
+    /* width: 30%; */
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 20px 0;
+}
+.info_card p{
+    font-family: 'SairaStencilOne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 16px;
+    color: white;
+    padding: 10px;
+}

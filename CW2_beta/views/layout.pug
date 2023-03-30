@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        title Cards app
+        link(rel='stylesheet' href='/static/style.css')
+
+    body
+      header.navbar
+        h1 
+          a(href='/') Cards app 
+
+        nav.nav  
+          a(href="/cards") All cards 
+          a(href="/registers") Registers 
+
+      block content 

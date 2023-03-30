@@ -1,0 +1,30 @@
+@import 'font.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #070B0D;
+}
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.location h2{
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'SairaStencilOne';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 16px;
+    color: white;
+}
+.map{
+    border: 3px solid white;
+    /* width: 800px; */
+}

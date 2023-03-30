@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content 
+  div.container 
+    h1 All Cards
+
+    each card in cards
+      div.card-wrapper
+        a.card(href=`/cards/${ card.id }`)  #{card.title}
+        a.delete(href='#') delete  
