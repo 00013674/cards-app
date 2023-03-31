@@ -3,8 +3,17 @@ extends layout.pug
 block content 
   div.container 
     h1 All Cards
+    
+    if deleted
+      p.success Deleted
+
 
     each card in cards
       div.card-wrapper
         a.card(href=`/cards/${ card.id }`)  #{card.title}
-        a.delete(href='#') delete  
+    
+        if card.registers
+            a.registers(href=`/cards/${ card.id }/registers `)  #{ card.description }
+        else
+            a.unregisters(href=`/cards/${ card.id }/registers `)  #{ card.description }
+        a.delete(href=`/cards/${ card.id }/delete`) Delete 
