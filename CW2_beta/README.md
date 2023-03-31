@@ -6,7 +6,7 @@ You must perform the actions listed below in order to execute this web applicati
 
 1. Clone this reporitory
 ```bash
-git clone [repository link]
+git clone https://github.com/00013674/cards-app.git
 ```
 
 2. Install dependencies
