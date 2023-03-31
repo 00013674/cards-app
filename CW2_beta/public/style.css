@@ -112,3 +112,12 @@ a:hover{
     font-size: 1.2rem;
     color: darkgreen;
 }
+
+.registers, .unregisters{
+    text-decoration: none;
+    color: black;
+}
+
+.registers{
+    text-decoration: line-through;
+}
