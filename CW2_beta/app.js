@@ -45,6 +45,48 @@ app.post('/create', (req, res) =>{
 
 })
 
+app.get('/cards/:id/delete', (req, res) =>{
+    const id = req.params.id
+
+    fs.readFile('./data/cards.json', (err, data) => {
+        if (err) throw err
+
+        const cards = JSON.parse(data)
+
+        const filteredCards = cards.filter(card => card.id != id )
+
+        fs.writeFile('./data/cards.json', JSON.stringify(filteredCards), (err) => {
+            if (err) throw err
+
+            res.render('cards', { cards: filteredCards, delete: true })
+        })
+    })
+})
+
+app.get('/cards/:id/registers', (req, res) =>{
+    const id = req.params.id
+
+    fs.readFile('./data/cards.json', (err, data) => {
+        if (err) throw err
+
+        const cards = JSON.parse(data)
+        const card = cards.filter(card => card.id == id)[0]
+        
+        const cardIdx = cards.indexOf(card)
+        const splicedCard = cards.splice(cardIdx, 1)[0]
+        
+        splicedCard.registers = true
+        cards.push(splicedCard)
+
+        fs.writeFile('./data/cards.json', JSON.stringify(cards), (err) => {
+            if (err) throw err
+
+            res.render('cards', { cards: cards })
+        })
+    })
+        
+})
+
 app.get('/api/v1/cards', (req, res) =>{
     fs.readFile('./data/cards.json', (err, data) => {
         if (err) throw err
