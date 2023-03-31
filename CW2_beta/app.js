@@ -45,6 +45,15 @@ app.post('/create', (req, res) =>{
 
 })
 
+app.get('/api/v1/cards', (req, res) =>{
+    fs.readFile('./data/cards.json', (err, data) => {
+        if (err) throw err
+  
+        const cards = JSON.parse(data)
+  
+        res.json(cards)
+      })
+})
 
 app.get('/cards', (req, res) => {
     
